@@ -24,7 +24,7 @@ def hbnb():
 def c(text):
     """ displays C followed by value of text variable """
     text = text.replace('_', ' ')
-    return 'C %s' % text
+    return 'C {}'.format(text)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
