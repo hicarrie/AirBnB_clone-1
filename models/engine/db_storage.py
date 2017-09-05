@@ -80,3 +80,7 @@ class DBStorage:
                 expire_on_commit=False,
                 bind=self.__engine))
         self.__session = Session()
+
+    def close(self):
+        """ calls remove() method on private session attribute """
+        self.__session.remove()

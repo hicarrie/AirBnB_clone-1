@@ -17,3 +17,5 @@ class State(BaseModel, Base):
         cities = relationship('City', backref='state', cascade='delete')
     else:
         name = ''
+        def cities():
+            return storage.all("City")
