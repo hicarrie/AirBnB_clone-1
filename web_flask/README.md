@@ -18,7 +18,7 @@ Web Framework for Airbnb Clone
 
 ## Files
 **0-hello_route.py:** a script that starts a Flask web application listening on 0.0.0.0:5000
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 
 **1-hbnb_route.py:** a script that starts a Flask web application listening on 0.0.0.0:5000
@@ -29,14 +29,14 @@ Web Framework for Airbnb Clone
 
 **2-c_route.py:** a script that starts a Flask web application listening on 0.0.0.0:5000
 
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 - `/hbnb` displays "HBNB"
 - `/c/<text>` displays "C" followed by `text` variable
 
 **3-python_route.py:** a script that starts a Flask web application listening on 0.0.0.0:5000
 
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 - `/hbnb` displays "HBNB"
 - `/c/<text>` displays "C " followed by `text` variable
@@ -44,7 +44,7 @@ Web Framework for Airbnb Clone
 
 **4-number_route.py:** a script that starts a Flask web application listening on 0.0.0.0:5000
 
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 - `/hbnb` displays "HBNB"
 - `/c/<text>` displays "C " followed by `text` variable
@@ -53,7 +53,7 @@ Web Framework for Airbnb Clone
 
 **5-number_template.py, templates/5-number.html:** a script that starts a Flask web application listening on 0.0.0.0:5000
 
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 - `/hbnb` displays "HBNB"
 - `/c/<text>` displays "C " followed by `text` variable
@@ -63,7 +63,7 @@ Web Framework for Airbnb Clone
 
 **6-number_odd_or_even.py, templates/6-number_odd_or_even.html:** a script that starts a Flask web application listening on 0.0.0.0:5000
 
-**Routes:**
+Routes:
 - `/` displays "Hello HBNB!"
 - `/hbnb` displays "HBNB"
 - `/c/<text>` displays "C " followed by `text` variable
@@ -81,23 +81,23 @@ Update `State`: (`models/state.py`)
 
 **web_flask/7-states_list.py, web_flask/templates/7-states_list.html:** a script that starts a Flask web application listening on 0.0.0.0:5000 and uses storage for fetching data from the storage engine
 
-**Routes:**
+Routes:
 - `/states_list` displays an HTML page listing all `State` objects
 
 **web_flask/8-cities_by_states.py, web_flask/templates/8-cities_by_states.html:** a script that starts a Flask web application listening on 0.0.0.0:5000 and uses storage for fetching data from the storage engine
 
-**Routes:**
+Routes:
 - `/cities_by_states` displays an HTML page listing all `State` and `City` objects
 
 **web_flask/9-states.py, web_flask/templates/9-states.html:** a script that starts a Flask web application listening on 0.0.0.0:5000 and uses storage for fetching data from the storage engine
 
-**Routes:**
+Routes:
 - `/states` displays an HTML page listing all `State` objects
 - `/states/<id>` displays an HTML page with `State` associated with that id and `City` objects associated with that state
 
 **web_flask/10-hbnb_filters.py, web_flask/templates/10-hbnb_filters.html, web_flask/static/:** a script that starts a Flask web application listening on 0.0.0.0:5000 and uses storage for fetching data from the storage engine
 
-**Routes:**
+Routes:
 - `/hbnb_filters` displays an HTML index page from web_static project
 
 ## Authors
