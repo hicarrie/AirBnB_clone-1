@@ -37,12 +37,6 @@ class DBStorage:
 
     def all(self, cls=None):
         """ returns a dictionary of all objects """
-        Session = scoped_session(
-            sessionmaker(
-                autoflush=False,
-                expire_on_commit=False,
-                bind=self.__engine))
-        self.__session = Session()
         obj_dict = {}
         if cls:
             obj_class = self.__session.query(self.CNC.get(cls)).all()
@@ -74,12 +68,9 @@ class DBStorage:
     def reload(self):
         """ creates all tables in database & session from engine """
         Base.metadata.create_all(self.__engine)
-        Session = scoped_session(
-            sessionmaker(
-                autoflush=False,
-                expire_on_commit=False,
-                bind=self.__engine))
-        self.__session = Session()
+        self.__session = scoped_session(sessionmaker
+                                        (bind=self.__engine,
+                                         expire_on_commit=False))
 
     def close(self):
         """ calls remove() method on private session attribute """
