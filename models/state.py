@@ -19,5 +19,10 @@ class State(BaseModel, Base):
         name = ''
 
         @property
-        def cities():
-            return storage.all("City")
+        def cities(self):
+            """ returns list of City objects linked to current State """
+            city_list = []
+            for city in storage.all("City").values():
+                if city.state_id == self.id:
+                    city_list.append(city)
+            return city_list
