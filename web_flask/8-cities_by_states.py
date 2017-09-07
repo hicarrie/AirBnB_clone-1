@@ -19,15 +19,23 @@ def teardown(self):
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
     """ displays 8-cities_by_states.html """
-    states = storage.all("State").values()
+    states_all = storage.all("State").values()
     if os.environ.get('HBNB_TYPE_STORAGE') == 'db':
-        cities = []
-        for state in states:
-            cities.append(state.cities)
+        states = {}
+        for state in states_all:
+            states['id'] = state.id
+            states['name'] = state.name
+            for city in state.cities:
+                cities = {}
+                if city.state_id == state.id:
+                    cities['id'] = city.id
+                    cities['name'] = city.name
+            if len(cities) > 0:
+                states['cities'] = cities
+        print(states)
     else:
         cities = states.cities()
-    return render_template('8-cities_by_states.html', states=states,
-                           cities=cities)
+    return render_template('8-cities_by_states.html', states=states)
 
 
 if __name__ == "__main__":
